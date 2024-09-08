@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Billing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin - Billing Page</h1>
+        
+        <!-- User ID Input Section -->
+        <div id="userInputSection">
+            <label for="userId">Enter User ID to Generate Invoice:</label>
+            <input type="text" id="userId" placeholder="Enter User ID" required>
+            <button onclick="generateInvoice()">Generate Invoice</button>
+        </div>
+        
+        <!-- Invoice Display Section -->
+        <div id="invoiceSection" class="hidden">
+            <h2>Invoice Details</h2>
+            <div id="invoiceDetails"></div>
+            <button onclick="finalizeInvoice()">Finalize Invoice</button>
+        </div>
+        
+        <hr>
+        
+        <!-- Booking History Section -->
+        <div id="bookingHistorySection">
+            <h2>Customer - Booking History Page</h2>
+            <button onclick="viewBookingHistory()">View Booking History</button>
+            <div id="bookingHistory" class="hidden"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

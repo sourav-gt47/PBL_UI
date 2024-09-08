@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Billing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Billing Page</h1>
+
+        <!-- Billing Page Section -->
+        <div id="billingSection">
+            <h2>View Your Bill</h2>
+            <button onclick="viewBill()">View Billing Details</button>
+        </div>
+
+        <!-- Bill Details Section -->
+        <div id="billDetailsSection" class="hidden">
+            <h2>Billing Details</h2>
+            <div id="billDetails">
+                <!-- Bill details will be displayed here -->
+            </div>
+            <button onclick="goToPayment()">Proceed to Payment</button>
+        </div>
+
+        <!-- Payment Page Section -->
+        <div id="paymentSection" class="hidden">
+            <h2>Payment Page</h2>
+            <p>Total Amount Due: <span id="totalAmount">$0</span></p>
+            <button onclick="makePayment()">Pay Now</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

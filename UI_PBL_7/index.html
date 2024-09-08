@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Reservation Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Reservation Management</h1>
+
+        <!-- Reservation Approval Section -->
+        <div id="reservationSection">
+            <h2>User Reservations</h2>
+            <div class="reservation">
+                <p><strong>Reservation ID:</strong> 001</p>
+                <p><strong>User Name:</strong> John Doe</p>
+                <p><strong>Room Type Requested:</strong> Deluxe</p>
+                
+                <!-- Approval Dropdown -->
+                <label for="approvalStatus">Approval Status:</label>
+                <select id="approvalStatus" onchange="handleApprovalChange(this)">
+                    <option value="">Select</option>
+                    <option value="approve">Approve</option>
+                    <option value="reject">Reject</option>
+                </select>
+
+                <!-- Room Type Selection for Approved Reservations -->
+                <div id="roomSelection" class="hidden">
+                    <label for="roomType">Select Room Type:</label>
+                    <select id="roomType">
+                        <option value="Standard">Standard</option>
+                        <option value="Deluxe">Deluxe</option>
+                        <option value="Suite">Suite</option>
+                    </select>
+                    <button onclick="checkInUser()">Check In User</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
